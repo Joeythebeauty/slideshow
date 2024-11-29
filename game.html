@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblical Evidence for Christ's Deity</title>
+    <style>
+        body {
+            background: url('DALL·E 2024-11-28 23.19.59 - An action shot of the sovereign God, the Lord Jesus Christ, in all His glory and power, swinging the universe into existence. He is depicted with radi.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Add overlay to ensure text readability */
+        body::before {
+            display: none;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .slide {
+            display: none;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(3px);
+            border: 2px solid rgba(255, 215, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            animation: fadeEffect 1s;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeEffect {
+            from {opacity: 0}
+            to {opacity: 1}
+        }
+
+        .slide-title {
+            color: #ffd700;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .scripture {
+            font-style: italic;
+            color: #ffffff;
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 3px solid #ffd700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .explanation {
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .reference {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            background: #333;
+            color: #fff;
+            border: 1px solid #ffd700;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-button:hover {
+            background: #ffd700;
+            color: #000;
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #333;
+            margin-top: 20px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #ffd700;
+            transition: width 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .slide-title {
+                font-size: 1.5em;
+            }
+
+            .scripture {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .nav-button {
+                padding: 15px 25px;  /* Larger touch targets for mobile */
+                margin: 0 5px;
+            }
+
+            .explanation {
+                font-size: 0.95em;
+            }
+        }
+
+        /* Add touch swipe support visual indicator */
+        .swipe-hint {
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 10px;
+            animation: fadeOut 3s forwards;
+            animation-delay: 5s;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div id="slides"></div>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="changeSlide(-1)">Previous</button>
+            <button class="nav-button" onclick="changeSlide(1)">Next</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        const divineEvidences = [
+            {
+                title: "Pre-Incarnate Christ in Genesis",
+                scripture: "Then the LORD rained on Sodom and Gomorrah brimstone and fire from the LORD out of heaven",
+                reference: "Genesis 19:24",
+                explanation: "This verse shows two distinct persons called LORD (YHWH), suggesting both the Father and Son acting in the Old Testament."
+            },
+            {
+                title: "The Fourth Man in the Fire",
+                scripture: "Look! I see four men walking around in the fire... and the fourth looks like a son of the gods!",
+                reference: "Daniel 3:25",
+                explanation: "A pre-incarnate appearance of Christ, demonstrating His divine nature and protection of His people."
+            },
+            {
+                title: "David's Prophetic Declaration",
+                scripture: "The LORD says to my Lord: 'Sit at my right hand until I make your enemies a footstool for your feet.'",
+                reference: "Psalm 110:1",
+                explanation: "Jesus used this verse to prove His deity, showing David calling his descendant 'Lord'."
+            },
+            {
+                title: "Divine Throne Declaration",
+                scripture: "Your throne, O God, will last for ever and ever... Therefore God, your God, has set you above your companions.",
+                reference: "Hebrews 1:8-9",
+                explanation: "The Father directly addresses the Son as God, confirming Christ's deity."
+            },
+            {
+                title: "Christ's Eternal Nature",
+                scripture: "Jesus said to them, 'Truly, truly, I say to you, before Abraham was, I am.'",
+                reference: "John 8:58",
+                explanation: "Jesus claims the divine name 'I AM' (YHWH), declaring His eternal existence and deity."
+            },
+            {
+                title: "Unity with the Father",
+                scripture: "I and the Father are one.",
+                reference: "John 10:30",
+                explanation: "A direct claim of Christ's divine nature and unity with God the Father."
+            },
+            {
+                title: "Divine Creation Council",
+                scripture: "Then God said, 'Let Us make man in Our image, according to Our likeness.'",
+                reference: "Genesis 1:26",
+                explanation: "The plural pronouns suggest the Trinity's involvement in creation, including Christ."
+            },
+            {
+                title: "Divine Titles",
+                scripture: "'I am the Alpha and the Omega,' says the Lord God, 'who is and who was and who is to come, the Almighty.'",
+                reference: "Revelation 1:8",
+                explanation: "Christ claims divine titles that belong only to God."
+            },
+            {
+                title: "Christ as Creator",
+                scripture: "Through him all things were made; without him nothing was made that has been made.",
+                reference: "John 1:3",
+                explanation: "Attributes creation to Christ, a power belonging only to God."
+            },
+            {
+                title: "Divine Worship",
+                scripture: "Thomas said to him, 'My Lord and my God!'",
+                reference: "John 20:28",
+                explanation: "Thomas's confession of Christ's deity, which Jesus accepts as true."
+            },
+            {
+                title: "The Eternal Priest-King Melchizedek",
+                scripture: "The LORD has sworn and will not change his mind: 'You are a priest forever, in the order of Melchizedek.'",
+                reference: "Psalm 110:4 & Hebrews 7:1-3",
+                explanation: "Melchizedek, as a type of Christ, had 'no beginning of days or end of life' - a clear reference to Christ's eternal nature."
+            },
+            {
+                title: "The Divine Child",
+                scripture: "For to us a child is born, to us a son is given... and he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.",
+                reference: "Isaiah 9:6",
+                explanation: "Directly calls the promised Messiah 'Mighty God' and 'Everlasting Father'."
+            },
+            {
+                title: "The Three Heavenly Witnesses",
+                scripture: "For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.",
+                reference: "1 John 5:7 (KJV)",
+                explanation: "Direct testimony of Christ's unity within the Trinity."
+            },
+            {
+                title: "Angel of the LORD at the Burning Bush",
+                scripture: "There the angel of the LORD appeared to him in flames of fire from within a bush... God called to him from within the bush",
+                reference: "Exodus 3:2-4",
+                explanation: "The Angel of the LORD is identified as God Himself - a Christophany."
+            },
+            {
+                title: "Angel of the LORD and Hagar",
+                scripture: "She gave this name to the LORD who spoke to her: 'You are the God who sees me.'",
+                reference: "Genesis 16:13",
+                explanation: "Hagar identifies the Angel of the LORD as God Himself."
+            },
+            {
+                title: "The Word Was God",
+                scripture: "In the beginning was the Word, and the Word was with God, and the Word was God... The Word became flesh and made his dwelling among us.",
+                reference: "John 1:1,14",
+                explanation: "Direct statement of Christ's deity and incarnation."
+            },
+            {
+                title: "The Divine Image",
+                scripture: "The Son is the image of the invisible God... in him all things were created... He is before all things.",
+                reference: "Colossians 1:15-17",
+                explanation: "Describes Christ as the creator and sustainer of all things."
+            },
+            {
+                title: "Equal With God",
+                scripture: "Who, being in very nature God, did not consider equality with God something to be used to his own advantage.",
+                reference: "Philippians 2:6",
+                explanation: "Explicitly states Christ's divine nature and equality with God."
+            },
+            {
+                title: "The Fullness of Deity",
+                scripture: "For in Christ all the fullness of the Deity lives in bodily form.",
+                reference: "Colossians 2:9",
+                explanation: "Clear statement that Christ possesses the complete divine nature."
+            },
+            {
+                title: "Angel of the LORD and Jacob",
+                scripture: "The angel of God said to me in the dream... 'I am the God of Bethel.'",
+                reference: "Genesis 31:11,13",
+                explanation: "Another instance where the Angel of the LORD identifies Himself as God."
+            },
+            {
+                title: "Worship of Christ",
+                scripture: "And again, when God brings his firstborn into the world, he says, 'Let all God's angels worship him.'",
+                reference: "Hebrews 1:6",
+                explanation: "God commands angels to worship Christ, an act reserved only for God."
+            },
+            {
+                title: "The Great I AM Statements",
+                scripture: "I am the bread of life... I am the light of the world... I am the resurrection and the life...",
+                reference: "John 6:35, 8:12, 11:25",
+                explanation: "Jesus uses divine 'I AM' statements, claiming God's name and attributes."
+            },
+            {
+                title: "Power to Forgive Sins",
+                scripture: "'But that you may know that the Son of Man has authority on earth to forgive sins...' - something only God can do.",
+                reference: "Mark 2:10",
+                explanation: "Jesus claims and demonstrates authority that belongs only to God."
+            },
+            {
+                title: "The Divine Judge",
+                scripture: "For the Father judges no one, but has given all judgment to the Son, that all may honor the Son, just as they honor the Father.",
+                reference: "John 5:22-23",
+                explanation: "Jesus claims the divine role of final judge and equal honor with the Father."
+            },
+            {
+                title: "Angel of the LORD and Manoah",
+                scripture: "Manoah realized that it was the angel of the LORD. 'We are doomed to die!' he said to his wife. 'We have seen God!'",
+                reference: "Judges 13:21-22",
+                explanation: "Manoah recognizes the Angel of the LORD as God Himself."
+            },
+            {
+                title: "The Voice at the Baptism",
+                scripture: "And a voice from heaven said, 'This is my Son, whom I love; with him I am well pleased.' At that moment heaven was opened",
+                reference: "Matthew 3:16-17",
+                explanation: "The Trinity manifested simultaneously: Son in flesh, Spirit as dove, Father's voice from heaven."
+            },
+            {
+                title: "The Living Torah",
+                scripture: "In the beginning was the Word [Logos]... and the Word was God... The Word became flesh",
+                reference: "John 1:1,14",
+                explanation: "Jesus is presented as the living embodiment of Torah (God's Word), which Jews considered divine and eternal."
+            },
+            {
+                title: "Greater Than the Temple",
+                scripture: "I tell you that something greater than the temple is here... For the Son of Man is Lord of the Sabbath",
+                reference: "Matthew 12:6-8",
+                explanation: "Jesus claims authority over both Temple and Sabbath - institutions established by God Himself."
+            },
+            {
+                title: "The Divine Shepherd",
+                scripture: "I am the good shepherd [comparing to Psalm 23: 'The LORD is my shepherd']",
+                reference: "John 10:11 & Psalm 23:1",
+                explanation: "Jesus identifies Himself with YHWH's role as shepherd from Psalm 23."
+            },
+            {
+                title: "Walking on Water Parallel",
+                scripture: "He alone stretches out the heavens and treads on the waves of the sea [Job] / Jesus walked on the water [Matthew]",
+                reference: "Job 9:8 & Matthew 14:25",
+                explanation: "Jesus demonstrates an ability Job attributed only to God."
+            },
+            {
+                title: "The Divine Bridegroom",
+                scripture: "For your Maker is your husband, the LORD of hosts is his name [Isaiah] / Can the wedding guests fast while the bridegroom is with them? [Mark]",
+                reference: "Isaiah 54:5 & Mark 2:19",
+                explanation: "Jesus claims the role of divine bridegroom that YHWH claimed in the Old Testament."
+            },
+            {
+                title: "The Glory Shared",
+                scripture: "And now, Father, glorify me in your presence with the glory I had with you before the world began.",
+                reference: "John 17:5",
+                explanation: "Jesus claims to have shared God's glory before creation - something God says He doesn't share with others (Isaiah 42:8)."
+            },
+            {
+                title: "The Seven 'I AM' Statements in John",
+                scripture: "I AM the Bread of Life, Light of the World, Gate, Good Shepherd, Resurrection and Life, Way/Truth/Life, True Vine",
+                reference: "John 6:35, 8:12, 10:9, 10:11, 11:25, 14:6, 15:1",
+                explanation: "Seven complete 'I AM' statements echoing God's name from Exodus 3:14."
+            },
+            {
+                title: "The Divine Rock",
+                scripture: "They drank from the spiritual rock that accompanied them, and that rock was Christ",
+                reference: "1 Corinthians 10:4",
+                explanation: "Paul identifies Christ as the divine rock that followed Israel - a reference to YHWH in the Old Testament."
+            },
+            {
+                title: "The Name Above All Names",
+                scripture: "Therefore God exalted him to the highest place and gave him the name that is above every name",
+                reference: "Philippians 2:9",
+                explanation: "Jesus receives YHWH's name - the name above all names in Jewish understanding."
+            },
+            {
+                title: "Conceptual: The Perfect Sacrifice",
+                scripture: "For by one sacrifice he has made perfect forever those who are being made holy",
+                reference: "Hebrews 10:14",
+                explanation: "Only God could offer a perfect sacrifice - if Jesus wasn't God, His sacrifice wouldn't be sufficient."
+            },
+            {
+                title: "Conceptual: Omnipresence Promise",
+                scripture: "For where two or three gather in my name, there am I with them",
+                reference: "Matthew 18:20",
+                explanation: "Jesus claims omnipresence - a divine attribute impossible for a mere human."
+            },
+            {
+                title: "Hidden Deity in Parables",
+                scripture: "The kingdom of heaven is like a man who sowed good seed in his field",
+                reference: "Matthew 13:24",
+                explanation: "In Jewish parables, the king/landowner typically represented God - Jesus puts Himself in this role."
+            },
+            {
+                title: "The Divine Host",
+                scripture: "Then the King will say to those on his right, 'Come, you who are blessed by my Father'",
+                reference: "Matthew 25:34",
+                explanation: "Jesus claims the role of eschatological host - a role reserved for God in Jewish tradition."
+            },
+            {
+                title: "Angel of the LORD and Gideon",
+                scripture: "When Gideon realized that it was the angel of the LORD, he exclaimed, 'Ah, Sovereign LORD! I have seen the angel of the LORD face to face!'",
+                reference: "Judges 6:22",
+                explanation: "Another Christophany where the Angel of the LORD is identified as God Himself."
+            },
+            {
+                title: "Conceptual: The Perfect High Priest",
+                scripture: "Such a high priest truly meets our need—one who is holy, blameless, pure, set apart from sinners, exalted above the heavens",
+                reference: "Hebrews 7:26",
+                explanation: "Only God could be perfectly holy and blameless - necessary attributes of our High Priest."
+            },
+            {
+                title: "The Divine Light",
+                scripture: "The LORD is my light [Psalm] / I am the light of the world [John]",
+                reference: "Psalm 27:1 & John 8:12",
+                explanation: "Jesus claims a title that belonged to YHWH in the Old Testament."
+            },
+            {
+                title: "The Divine Lawgiver",
+                scripture: "You have heard it was said... but I tell you...",
+                reference: "Matthew 5:21-22",
+                explanation: "Jesus claims authority to reinterpret/expand divine law - something only its divine author could do."
+            }
+        ];
+
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= divineEvidences.length) currentSlide = 0;
+            if (n < 0) currentSlide = divineEvidences.length - 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            
+            updateProgress();
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        function updateProgress() {
+            const progress = document.getElementById('progress');
+            const percentage = ((currentSlide + 1) / divineEvidences.length) * 100;
+            progress.style.width = percentage + '%';
+        }
+
+        function createSlides() {
+            const slidesContainer = document.getElementById('slides');
+            divineEvidences.forEach(evidence => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.innerHTML = `
+                    <div class="slide-title">${evidence.title}</div>
+                    <div class="scripture">${evidence.scripture}</div>
+                    <div class="reference">${evidence.reference}</div>
+                    <div class="explanation">${evidence.explanation}</div>
+                `;
+                slidesContainer.appendChild(slide);
+            });
+            showSlide(0);
+        }
+
+        document.addEventListener('DOMContentLoaded', createSlides);
+
+        // Add touch swipe support
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50; // minimum distance for a swipe
+            if (touchendX < touchstartX - swipeThreshold) changeSlide(1); // swipe left
+            if (touchendX > touchstartX + swipeThreshold) changeSlide(-1); // swipe right
+        }
+
+        // Prevent zoom on double tap
+        document.addEventListener('dblclick', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
